@@ -1,12 +1,18 @@
+// resource (https://gsap.com/docs/v3/GSAP)
 import { useGSAP } from "@gsap/react";
-
+import gsap from "gsap";
 const GsapTo = () => {
   // TODO: Implement the gsap.to() method
   useGSAP(() => {
-    // targets is id and vars is the animate 
-    gsap.to('#blue-box', {
-      x:250,
-    })
+    // targets is id and vars is the animate
+    gsap.to("#blue-box", {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      rotate: 360,
+      duration: 2,
+      ease: 'power2.inOut',
+    });
   }, []);
   return (
     <main>
