@@ -1,6 +1,13 @@
+import { useGSAP } from "@gsap/react";
+
 const GsapTo = () => {
   // TODO: Implement the gsap.to() method
-
+  useGSAP(() => {
+    // targets is id and vars is the animate 
+    gsap.to('#blue-box', {
+      x:250,
+    })
+  }, []);
   return (
     <main>
       <h1>GsapTo</h1>
@@ -30,6 +37,7 @@ const GsapTo = () => {
       </p>
 
       <div className="mt-20">
+        {/* by id we can animate the box */}
         <div id="blue-box" className="w-20 h-20 bg-blue-500 rounded-lg" />
       </div>
     </main>
